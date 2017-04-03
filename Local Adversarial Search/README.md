@@ -35,7 +35,7 @@ Problem 1 (Coal Block Auction)
 To Run
 ------
 
-1. Locate to 'coalblockauction' directory of 'code'.
+1. Locate to '[coalblockauction](code/coalblockauction)' directory.
 
 2. Make the code using
 make
@@ -60,7 +60,7 @@ Bids are 1 indexed
 Problem 2 (PacMan Multi Agent)
 ==============================
 
-1. Locate to 'multiagent' directory of 'code'.
+1. Locate to '[multiagent](code/multiagent)' directory.
 
 2. Run using
 python autograder.py
