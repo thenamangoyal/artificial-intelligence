@@ -5,9 +5,8 @@ Directory Structure
 -------------------
 
 ---code
-	|
-	|- [search.py](code/search.py)
-	|- [searchAgent.py](code/searchAgent.py)
+	[search.py](code/search.py)
+	[searchAgent.py](code/searchAgent.py)
 
 ---[l1.pdf](l1.pdf)
 
@@ -22,8 +21,8 @@ Introduction
 Experimenting with different AI search techniques in a Pacman environment. This is part of the Pacman projects developed at [UC Berkeley](http://ai.berkeley.edu/project_overview.html). The Pacman agent needs to find paths through the maze world, both to reach a location and to collect food efficiently.
 
 
-*Please refer to [Report.pdf](Report.pdf) for detailed analysis.
-*Please refer to [l1.pdf](l1.pdf) for about the project.
+* Please refer to [Report.pdf](Report.pdf) for detailed analysis.
+* Please refer to [l1.pdf](l1.pdf) for about the project.
 
 Executing the Script
 --------------------
