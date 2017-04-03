@@ -35,7 +35,7 @@ Problem 1 (Coal Block Auction)
 To Run
 ------
 
-1. In the 'p1' directory copy all test cases.
+1. Locate to 'coalblockauction' directory of 'code'.
 
 2. Make the code using
 make
@@ -60,7 +60,7 @@ Bids are 1 indexed
 Problem 2 (PacMan Multi Agent)
 ==============================
 
-1. Copy the 'multiagent.py' form 'p2' directory to directory where l2.zip is extracted with all necessary files.
+1. Locate to 'multiagent' directory of 'code'.
 
 2. Run using
 python autograder.py
