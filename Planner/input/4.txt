@@ -1,0 +1,6 @@
+5
+f
+initial
+(ontable 5) (clear 2) (on 1 3) (on 2 1) (on 3 4) (on 4 5) (empty)
+goal
+(ontable 5) (ontable 4) (clear 3) (clear 4) (on 1 5) (on 2 1) (on 3 2) (empty)

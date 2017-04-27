@@ -1,0 +1,6 @@
+12
+g
+initial
+(ontable 4) (ontable 6) (ontable 2) (clear 5) (clear 9) (clear 1) (on 1 2) (on 3 4) (on 5 8) (on 7 6) (on 8 7) (on 9 12) (on 10 3) (on 11 10) (on 12 11) (empty)
+goal
+(ontable 4) (ontable 7) (ontable 8) (ontable 2) (clear 1) (clear 5) (clear 6) (clear 10) (on 1 2) (on 3 4) (on 5 7) (on 6 8) (on 9 11) (on 10 12) (on 11 3) (on 12 9) (empty)

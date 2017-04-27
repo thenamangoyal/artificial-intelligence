@@ -1,0 +1,213 @@
+\documentclass[32pt]{article}
+\usepackage{hyperref}
+\usepackage[margin=1.10in]{geometry}
+
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\renewcommand{\lstlistingname}{Code}
+\lstdefinestyle{python}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+ \lstset{escapeinside={(*@}{@*)}}
+
+\title{Lab4 - Planning}
+\author{Naman Goyal (2015CSB1021)}
+\begin{document}
+
+\vspace{-0.5cm}
+\maketitle
+
+
+
+\section{Planners for Block World}
+\paragraph{Objective}
+To compare the performance of various planners
+
+
+\begin{itemize}
+   \item{Forward (progression) planner using breadth first search}
+\item{Forward (progression) planner using A* search}
+\item{Goal Stack planner}
+\end{itemize}
+
+\subsection{Statistics}
+\begin{center}
+1.txt (4 blocks) \\
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+ \textbf{Performance Metric} & \textbf{BFS} & \textbf{\specialcell{Admissible\\A* Search}} & \textbf{\specialcell{Inadmissible\\A* Search}} & \textbf{Goal Stack}  \\ 
+ \hline]
+ 
+  \textit{Search Time (in sec)} & 0.018 & 0.003 & 0.003 & 0.003 \\ 
+ \hline
+ \textit{Path Length} & 10 & 10 & 10 & 18 \\ 
+  \hline
+ \textit{Number of Nodes expanded} & 109 & 21 & 19 & -- \\ 
+ \hline
+  \textit{Size of Goal Stack} & -- & -- & -- & 9 \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+3.txt (5 blocks) \\
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+ \textbf{Performance Metric} & \textbf{BFS} & \textbf{\specialcell{Admissible\\A* Search}} & \textbf{\specialcell{Inadmissible\\A* Search}} & \textbf{Goal Stack}  \\ 
+\hline
+ 
+  \textit{Search Time (in sec)} & 0.024 & 0.004 & 0.004 & 0.003 \\ 
+ \hline
+ \textit{Path Length} & 14 & 14 & 16 & 18 \\ 
+  \hline
+ \textit{Number of Nodes expanded} & 499 & 45 & 42 & -- \\
+ \hline
+  \textit{Size of Goal Stack} & -- & -- & -- & 15 \\ 
+
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+5.txt (12 blocks) \\
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+ \textbf{Performance Metric} & \textbf{BFS} & \textbf{\specialcell{Admissible\\A* Search}} & \textbf{\specialcell{Inadmissible\\A* Search}} & \textbf{Goal Stack}  \\ 
+\hline
+ 
+  \textit{Search Time (in sec)} & -- & 4.012 & 0.145 & 0.004 \\ 
+ \hline
+ \textit{Path Length} & -- & 26 & 26 & 30 \\ 
+  \hline
+ \textit{Number of Nodes expanded} & -- & 22040 & 936 & -- \\
+ \hline
+  \textit{Size of Goal Stack} & -- & -- & -- & 19 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\fbox{\parbox{\textwidth}{BFS was not used for 12 blocks case since BFS expands all nodes and hence becomes memory intensive. Also BFS takes a huge time since it parses level by level to reach goal state.}}
+
+\subsection{Analysis}
+\begin{enumerate}
+    \item 
+    \textbf{Observation} 
+    
+    A* Search reduces the search time and number of nodes expanded significantly over BFS 
+    
+    \textbf{Explanation} 
+    
+    A* Search tries expanding those nodes which are more closer to goal state using heuristic value.
+    
+     \item 
+    
+    \textbf{Observation} 
+    
+    Inadmissible heuristics gives plan quickly but may return suboptimal plan over the admissible one.
+    
+    \textbf{Explanation} 
+    
+    Inadmissible heuristics overestimates the value of reaching the goal state and hence may return suboptimal answer.
+    
+    
+    \item 
+    
+    \textbf{Observation} 
+    
+    Goal Stack planning is faster than other two and requires much less memory but returns suboptimal plan.
+    
+    \textbf{Explanation} 
+    
+    Goal Stack Planning is a Goal Directed Search hence finds solution quickly; but Sussman's anomaly proves that Goal Stack Planning is suboptimal.
+    
+    
+\end{enumerate}
+
+\vfill
+
+\subsection{Heuristics}
+
+Heuristics returns an estimated value of arriving at goal state.
+
+It returns the estimated cost of solving a relaxed version of original sub-problem. The constraint that robotic arm can hold only one block is discarded and the robotic hand can now hold any number of blocks called \textbf{pool}. A block is added to pool only once using a cost of 1 step and is then removed from the pool again.
+
+Cost of removing a block for admissible case is 1.
+While the cost of removing a block for 'inadmissible' case is 1 (if block is ontable) and 3 (if block is on another block). Each of the unsatisfied literals in goal state is considered and the cost estimates of satisfying them are added.
+\vfill
+Consider the situation
+
+\begin{center}
+\textbf{Current State}
+(on 1 2) (on 2 3) (ontable 3) (clear 1) (empty)
+
+\textbf{Goal State}
+(on 1 2) (ontable 2) (ontable 3) (clear 3) (clear 1) (empty)
+\end{center}
+
+
+To satisfy (Clear 3) all the blocks above 3 i.e. 1 and 2 are put into the pool. Since none of them was already in pool the cost is 2 steps.
+
+Then since the goal state has arm empty; 1 and 2 are removed from the pool.
+
+For admissible case, the blocks 1 & 2 are removed from pool using a step cost 1 each i.e. total 2 steps.
+
+For inadmissible case, the block 1 (on 2) is removed using a cost of 3 and block 2 (ontable) is removed using a cost of 1 from pooli.e. total 4 steps.
+
+Hence Heuristic Value is 4 (for admissible) and 6 (for inadmissible) while actual cost is 6
+\vfill
+\newpage
+Consider the situation
+
+\begin{center}
+\textbf{Current State}
+(on 1 3) (on 3 4) (ontable 4) (ontable 2) (clear 1) (clear 2) (empty)
+
+\textbf{Goal State}
+(ontable 1) (ontable 2) (ontable 3) (ontable 4) (clear 1) (clear 2) (clear 3) (clear 4) (empty)
+\end{center}
+
+To satisfy (Clear 3) all the blocks above 3 i.e. 1 is put into the pool. Since 1 was  not already in pool the cost is 1 step.
+
+Then to Satisfy (Clear 4) all the blocks above 4 i.e. 1 and 3 are put into the pool. Since 1 was already in pool the cost is 0 step while 3 was not in pool so cost is 1 step. Net cost of putting in pool is $1 + 0 = 1$ step
+
+For admissible case, the blocks 1 & 3 are removed from pool using a step cost 1 each i.e. total 2 steps.
+
+For admissible case, the blocks 1 & 3 are removed from pool using a step cost 1 each (as both on table) i.e. total 2 steps.
+
+Hence Heuristic Value is 4 (for admissible) and 4 (for inadmissible) while actual cost is 4.
+
+
+
+
+
+\end{document}

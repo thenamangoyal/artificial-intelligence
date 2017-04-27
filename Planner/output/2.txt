@@ -1,0 +1,11 @@
+10
+action(unstack 4 3)
+action(stack 4 2)
+action(unstack 3 1)
+action(release 3)
+action(unstack 4 2)
+action(stack 4 3)
+action(pick 1)
+action(stack 1 4)
+action(pick 2)
+action(stack 2 1)
