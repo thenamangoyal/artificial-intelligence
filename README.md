@@ -3,9 +3,12 @@
 
 The implementations for the course Artificial Intelligence including C++ implementation of algorithms from Russell And Norvig's "Artificial Intelligence - A Modern Approach"
 
-1. [Chapter 3 Solving Problems by Searching](Search)
-2. [Chapter 4 and 5 Local and Adversarial Search](Local Adversarial Search)
-3. [Chapter 6 Constraint Satisfaction Problem](Constraint Satisfaction Problem)
+* Ch 3 <a href="Search"> Solving Problems by Searching</a>
+* Ch 4, 5  <a href="Local Adversarial Search">Local and Adversarial Search</a>
+* Ch 6 <a href= "Constraint Satisfaction Problem">Constraint Satisfaction Problem</a>
+* Ch 10 <a href="Planner">Classical Planning</a>
+* Ch 14 <a href="Bayesian Network">Probabilistic Reasoning</a>
+
 
 Note
 ----
