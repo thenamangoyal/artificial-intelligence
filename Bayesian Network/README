@@ -7,7 +7,23 @@ This project implements two techniques for drawing inference from a Bayes Networ
 • Exact inference using variable elimination
 • Approximate inference using rejection sampling
 
-* Please refer to Report.pdf for detailed analysis.
+* Please refer to (Report.pdf) for detailed analysis.
+
+Directory Structure
+-------------------
+
+---code
+	|
+	|---main.py
+	|---script.sh
+	|---b1.txt
+	|---b2.txt
+	|---b3.txt
+	|---q1.txt
+	|---q2.txt
+	|---q3.txt
+
+---Report.pdf
 
 To Run
 ------
@@ -31,28 +47,7 @@ Note
 1. No of samples for rejection sampling is optional
 2. By default no of samples for rejection sampling is 100000
 3. Output is printed to console by default
-
-
-Directory Structure
--------------------
-
----code
-	|
-	|---main.py
-	|---script.sh
-	|---b1.txt
-	|---b2.txt
-	|---b3.txt
-	|---q1.txt
-	|---q2.txt
-	|---q3.txt
-
----Report.pdf
-
-
-Note
-----
-To make script.sh executable use
+4. To make script.sh executable use
 
 chmod 755 script.sh
 
