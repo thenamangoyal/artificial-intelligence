@@ -1,6 +1,5 @@
-=====================
-Lab 3 : Sudoku Solver
-=====================
+Sudoku Solver
+=============
 
 Introduction
 ------------
