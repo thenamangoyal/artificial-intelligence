@@ -25,11 +25,11 @@ All generated output is in 'output' folder and statistics in 'stat' folder
 Note
 ----
 
-To make script.sh executable use
+*To make script.sh executable use
 
-chmod 755 script.sh
+ chmod 755 script.sh
 
-If runnign takes too long using g++ optimsizing tools like -O3
+*If running takes too long using g++ optimsizing tools like -O3
 
 i.e. g++ -O3 bs.cpp -o bin/bs
 
