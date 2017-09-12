@@ -68,12 +68,14 @@ e.g. to generate a 10 blocks problem for goal stack planning in 'input/new.txt' 
 Directory Structure
 -------------------
 
+---README
 ---code
 	|
 	|---main.cpp
 	|---generate.cpp
 	|---script.sh
 	|---input
+	
 		|
 		|---1.txt
 		|---2.txt
@@ -81,7 +83,9 @@ Directory Structure
 		|---4.txt
 		|---5.txt
 		|---6.txt
+		
 	|---output
+	
 		|
 		|---1.txt
 		|---2.txt
