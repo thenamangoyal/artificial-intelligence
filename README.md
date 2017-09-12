@@ -15,5 +15,5 @@ The implementations for the course Artificial Intelligence including C++ impleme
 Note
 ----
 * Please refer to individual Readme of particular directory on how to execute the script.
-* Each directory contains <dir_no>.pdf e.g [l3.pdf](Constraint Satisfaction Problem/l3.pdf) about the project
+* Each directory contains question in lab.pdf about the project
 * Each directory contains Report.pdf having complete analysis of the problem
