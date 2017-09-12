@@ -69,7 +69,9 @@ Directory Structure
 -------------------
 
 ---README
+
 ---code
+
 	|
 	|---main.cpp
 	|---generate.cpp
