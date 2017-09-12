@@ -1,4 +1,7 @@
 # artificial-intelligence
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/96ae6e6a3a804e9d9d2c4194dc4abb11)](https://www.codacy.com/app/namangl/artificial-intelligence?utm_source=github.com&utm_medium=referral&utm_content=namangl/artificial-intelligence&utm_campaign=badger)
+
  Artificial Intelligence - Spring 2017
 
 The implementations for the course Artificial Intelligence including C++ implementation of algorithms from Russell And Norvig's "Artificial Intelligence - A Modern Approach"
