@@ -8,7 +8,7 @@ Experimenting with different AI search techniques in a Pacman environment. This 
 
 
 * Please refer to [Report.pdf](Report.pdf) for detailed analysis.
-* Please refer to [l1.pdf](l1.pdf) for about the project.
+* Please refer to [lab.pdf](lab.pdf) for about the project.
 
 Directory Structure
 -------------------
@@ -17,7 +17,7 @@ Directory Structure
 	[search.py](code/search.py)
 	[searchAgent.py](code/searchAgent.py)
 
----[l1.pdf](l1.pdf)
+---[lab.pdf](lab.pdf)
 
 ---README.md
 

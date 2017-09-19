@@ -11,7 +11,7 @@ This project contains two problems
 2. This part has been adopted from Berkeley Pacman projects. Design agents for the classic version of Pacman, including ghosts. Implement both minimax and expectimax search and with evaluation function design.
 
 * Please refer to [Report.pdf](Report.pdf) for detailed analysis.
-* Please refer to [l2.pdf](l2.pdf) for about the project.
+* Please refer to [lab.pdf](lab.pdf) for about the project.
 
 Directory Structure
 -------------------
@@ -20,7 +20,7 @@ Directory Structure
 	[coalblockauction/main.cpp](code/coalblockauction/main.cpp)
 	[multiagent/multiAgents.py](code/multiagent/multiAgents.py)
 
----[l2.pdf](l2.pdf)
+---[lab.pdf](lab.pdf)
 
 ---README.md
 
@@ -28,8 +28,6 @@ Directory Structure
 
 Problem 1 (Coal Block Auction)
 ==============================
-
-
 
 To Run
 ------

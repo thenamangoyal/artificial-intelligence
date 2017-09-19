@@ -7,7 +7,8 @@ This project implements two techniques for drawing inference from a Bayes Networ
 • Exact inference using variable elimination
 • Approximate inference using rejection sampling
 
-* Please refer to (Report.pdf) for detailed analysis.
+* Please refer to [Report.pdf](Report.pdf) for detailed analysis.
+* Please refer to [lab.pdf](lab.pdf) for about the project.
 
 Directory Structure
 -------------------
@@ -24,7 +25,12 @@ Directory Structure
 	|---q2.txt
 	|---q3.txt
 
----Report.pdf
+
+---[lab.pdf](lab.pdf)
+
+---README.md
+
+---[Report.pdf](Report.pdf)
 
 To Run
 ------

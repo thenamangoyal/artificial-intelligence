@@ -10,7 +10,7 @@ This project contains two problems
 2. Formulate Sudoku as a Boolean satisfiability problem and solve using MiniSAT solver.
 
 * Please refer to [Report.pdf](Report.pdf) for detailed analysis.
-* Please refer to [l3.pdf](l3.pdf) for about the project.
+* Please refer to [lab.pdf](lab.pdf) for about the project.
 
 
 Directory Structure
@@ -23,7 +23,7 @@ Directory Structure
 	[p1/bsMAC.cpp](code/p1/bsMAC.cpp)
 	[p2/main.cpp](code/p2/main.cpp)
 
----[l2.pdf](l2.pdf)
+---[lab.pdf](lab.pdf)
 
 ---README.md
 
