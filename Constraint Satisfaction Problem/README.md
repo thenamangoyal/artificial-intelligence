@@ -17,7 +17,6 @@ Directory Structure
 -------------------
 
 ---code
-	|
 	[p1/bs.cpp](code/p1/bs.cpp)
 	[p1/bsI.cpp](code/p1/bsI.cpp)
 	[p1/bsII.cpp](code/p1/bsII.cpp)
