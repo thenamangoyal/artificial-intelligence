@@ -17,3 +17,4 @@ Note
 * Please refer to individual Readme of particular directory on how to execute the script.
 * Each directory contains question in lab.pdf about the project
 * Each directory contains Report.pdf having complete analysis of the problem
+* Course Website http://cse.iitrpr.ac.in/ckn/courses/s2017/csl302/csl302.html
